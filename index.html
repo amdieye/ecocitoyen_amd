@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu et Icônes Interactives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        nav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .eco-citoyen-logo {
+            background-color: #006400;
+            color: #ffffff;
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            width: 4cm;
+            margin: 20px 0;
+            border: 1px solid #006400;
+            font-size: 24px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .eco-citoyen-line {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding-left: 20px;
+            justify-content: space-between;
+        }
+
+        .eco-citoyen-line .eco-citoyen-logo {
+            margin-right: 30px;
+        }
+
+        .eco-citoyen-line .eco-text {
+            font-size: 20px;
+            color: #006400;
+            margin-right: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .eco-citoyen-line .eco-text:hover {
+            color: #007BFF;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .icon:hover {
+            color: #007BFF;
+        }
+
+        section {
+            margin-top: 50px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .horizontal-bar {
+            width: 100%;
+            height: 10cm;
+            background-color: orange;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .horizontal-bar-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-style: italic;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .eco-info-dropdown {
+            margin-left: auto;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .icon {
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .icon:hover {
+            color: #007BFF;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Menu déroulant -->
+    <nav>
+        <a href="#services-publics" class="active">Services publics</a>
+        <a href="#partenaires">Partenaires</a>
+        <a href="#adhesion">Adhésion</a>
+    </nav>
+
+    <!-- Ligne avec logo Eco Citoyen et textes alignés à gauche -->
+    <div class="eco-citoyen-line">
+        <div class="eco-citoyen-logo">
+            Eco Citoyen
+        </div>
+
+        <div class="dropdown">
+            <span class="eco-text">Environnement</span>
+            <div class="dropdown-content">
+                <a href="#">Environnement 1</a>
+                <a href="#">Environnement 2</a>
+                <a href="#">Environnement 3</a>
+                <a href="#">Environnement 4</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span class="eco-text">Consommation</span>
+            <div class="dropdown-content">
+                <a href="#">Consommation 1</a>
+                <a href="#">Consommation 2</a>
+                <a href="#">Consommation 3</a>
+                <a href="#">Consommation 4</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span class="eco-text">Citoyenneté</span>
+            <div class="dropdown-content">
+                <a href="#">Citoyenneté 1</a>
+                <a href="#">Citoyenneté 2</a>
+                <a href="#">Citoyenneté 3</a>
+            </div>
+        </div>
+
+        <!-- Nouvelle liste déroulante Eco Infos -->
+        <div class="dropdown eco-info-dropdown">
+            <span class="eco-text">Eco Infos</span>
+            <div class="dropdown-content">
+                <a href="#">Bibliothèque</a>
+                <a href="#">Revue de presse</a>
+                <a href="#">Blogs</a>
+                <a href="#">Publications</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bande orange avec texte centré -->
+    <div class="horizontal-bar">
+        <div class="horizontal-bar-text">
+            Ici l'Actualité avec des images glissantes et des messages courts qui vont renvoyer vers ......
+        </div>
+    </div>
+
+    <!-- Conteneur d'icônes -->
+    <div class="icon-container">
+        <div class="icon">
+            <i class="fas fa-headset"></i>
+            <p>RECLAMATIONS & ASSISTANCE</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-recycle"></i>
+            <p>ECO GESTES</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-users"></i>
+            <p>ENGAGEMENT CITOYEN</p>
+        </div>
+        <div class="icon">
+            <i class="fas fa-cogs"></i>
+            <p>ECONOMIE CIRCULAIRE ET SOLIDAIRE</p>
+        </div>
+    </div>
+
+</body>
+</html>
