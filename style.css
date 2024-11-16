@@ -73,3 +73,15 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+/* Icônes des sections supplémentaires */
+.additional-icons .icon {
+    font-size: 40px; /* Agrandir la taille des icônes sans toucher la taille du texte */
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Ajouter un effet au survol de l'icône */
+.additional-icons .icon:hover {
+    color: #007BFF;
+}
