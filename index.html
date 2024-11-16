@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu et Icônes Interactives</title>
+    <title>Eco Citoyen - Accueil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -37,21 +37,6 @@
             color: white;
         }
 
-        .eco-citoyen-logo {
-            background-color: #006400;
-            color: #ffffff;
-            font-weight: bold;
-            text-align: center;
-            padding: 15px;
-            width: 4cm;
-            margin: 20px 0;
-            border: 1px solid #006400;
-            font-size: 24px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-right: 20px;
-        }
-
         .eco-citoyen-line {
             display: flex;
             align-items: center;
@@ -60,65 +45,34 @@
             justify-content: space-between;
         }
 
-        .eco-citoyen-line .eco-citoyen-logo {
-            margin-right: 30px;
-        }
-
-        .eco-citoyen-line .eco-text {
-            font-size: 20px;
-            color: #006400;
-            margin-right: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .eco-citoyen-line .eco-text:hover {
-            color: #007BFF;
-        }
-
-        .icon-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-
-        .icon {
+        .logo-container {
             text-align: center;
-            font-size: 30px;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s;
         }
 
-        .icon:hover {
-            color: #007BFF;
+        .eco-logo {
+            max-width: 100%;
+            height: auto;
+            width: 250px;
+            border-radius: 8px;
         }
 
-        section {
-            margin-top: 50px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        section {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #f9f9f9;
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 40px;
         }
 
         .dropdown {
             position: relative;
             display: inline-block;
-            margin-right: 20px;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 160px;
+            min-width: 200px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
             padding: 10px 0;
@@ -139,48 +93,112 @@
             display: block;
         }
 
+        .eco-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #006400;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .eco-infos {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            color: #8B0000;
+            margin-left: 60px;
+        }
+
+        /* Bande orange élargie verticalement */
         .horizontal-bar {
             width: 100%;
-            height: 10cm;
+            height: 400px;
             background-color: orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-top: 20px;
-            position: relative;
         }
 
         .horizontal-bar-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-style: italic;
             color: #fff;
-            font-size: 20px;
+            font-size: 24px;
             text-align: center;
-            max-width: 80%;
-        }
-
-        .eco-info-dropdown {
-            margin-left: auto;
         }
 
         .icon-container {
             display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
+            justify-content: space-evenly;
+            margin-top: 50px;
         }
 
-        .icon {
+        .icon-container .icon {
+            font-size: 24px; /* Icônes de taille réduite */
             text-align: center;
-            font-size: 30px;
+            color: #333;
+        }
+
+        .icon-container .icon:hover {
+            color: #007BFF;
+        }
+
+        /* Icônes des réseaux sociaux positionnées sous CONTACT */
+        .social-icons {
+            display: flex;
+            justify-content: flex-end; /* Déplacement à droite */
+            gap: 30px;
+            margin-top: 10px; /* Positionnement juste sous CONTACT */
+            padding-right: 30px; /* Un peu d'espace sur la droite */
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF;
+        }
+
+        /* Style pour le bouton CONTACT */
+        .contact-btn {
+            font-size: 14px; /* Police plus petite */
+            font-weight: normal;
+            color: black; /* Couleur noire */
+            text-transform: none;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            position: relative;
+            top: 3px; /* Ajuste la position verticale pour aligner avec les autres éléments */
+        }
+
+        .contact-btn:hover {
+            color: #007BFF; /* Couleur au survol */
+        }
+
+        /* Icônes de section supplémentaires (ASSISTANCE AUX CITOYENS, ECO GESTES, ENGAGEMENT CITOYEN, ECONOMIE CIRCULAIRE ET SOLIDAIRE) */
+        .additional-icons {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .additional-icons .icon {
+            font-size: 20px;
             color: #333;
             cursor: pointer;
             transition: color 0.3s;
         }
 
-        .icon:hover {
+        .additional-icons .icon:hover {
             color: #007BFF;
         }
-
     </style>
 </head>
 <body>
@@ -192,78 +210,79 @@
         <a href="#adhesion">Adhésion</a>
     </nav>
 
-    <!-- Ligne avec logo Eco Citoyen et textes alignés à gauche -->
+    <!-- Ligne avec logo Eco Citoyen et menus déroulants -->
     <div class="eco-citoyen-line">
-        <div class="eco-citoyen-logo">
-            Eco Citoyen
+        <div class="logo-container">
+            <img src="NEWLOGO.jpg" alt="Eco Citoyen" class="eco-logo">
         </div>
 
-        <div class="dropdown">
-            <span class="eco-text">Environnement</span>
-            <div class="dropdown-content">
-                <a href="#">Environnement 1</a>
-                <a href="#">Environnement 2</a>
-                <a href="#">Environnement 3</a>
-                <a href="#">Environnement 4</a>
+        <div class="menu-container">
+            <div class="dropdown">
+                <span class="eco-text">ENVIRONNEMENT</span>
+                <div class="dropdown-content">
+                    <a href="#">Biodiversité</a>
+                    <a href="#">Énergies Renouvelables</a>
+                </div>
             </div>
-        </div>
 
-        <div class="dropdown">
-            <span class="eco-text">Consommation</span>
-            <div class="dropdown-content">
-                <a href="#">Consommation 1</a>
-                <a href="#">Consommation 2</a>
-                <a href="#">Consommation 3</a>
-                <a href="#">Consommation 4</a>
+            <div class="dropdown">
+                <span class="eco-text">CONSOMMATION</span>
+                <div class="dropdown-content">
+                    <a href="#">Consommation Responsable</a>
+                    <a href="#">Éco-Labels</a>
+                </div>
             </div>
-        </div>
 
-        <div class="dropdown">
-            <span class="eco-text">Citoyenneté</span>
-            <div class="dropdown-content">
-                <a href="#">Citoyenneté 1</a>
-                <a href="#">Citoyenneté 2</a>
-                <a href="#">Citoyenneté 3</a>
+            <div class="dropdown">
+                <span class="eco-text">CITOYENNETÉ</span>
+                <div class="dropdown-content">
+                    <a href="#">Engagement Communautaire</a>
+                    <a href="#">Solidarité</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Nouvelle liste déroulante Eco Infos -->
-        <div class="dropdown eco-info-dropdown">
-            <span class="eco-text">Eco Infos</span>
-            <div class="dropdown-content">
-                <a href="#">Bibliothèque</a>
-                <a href="#">Revue de presse</a>
-                <a href="#">Blogs</a>
-                <a href="#">Publications</a>
+            <div class="dropdown">
+                <span class="eco-infos">Eco_Infos</span>
+                <div class="dropdown-content">
+                    <a href="#">Actualités</a>
+                    <a href="#">Publications</a>
+                    <div class="has-submenu">
+                        <a href="#">Publications</a>
+                        <div class="dropdown-sub-content">
+                            <a href="#">Eco_Newletters</a>
+                            <a href="#">Rapports</a>
+                            <a href="#">Autres</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Bouton CONTACT -->
+            <a href="contact.html" class="contact-btn">CONTACT</a>
         </div>
     </div>
 
-    <!-- Bande orange avec texte centré -->
+    <!-- Icônes des réseaux sociaux -->
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a> <!-- Icône YouTube ajoutée -->
+    </div>
+
+<!-- Bande orange élargie verticalement avec texte défilant -->
     <div class="horizontal-bar">
-        <div class="horizontal-bar-text">
-            Ici l'Actualité avec des images glissantes et des messages courts qui vont renvoyer vers ......
-        </div>
+        <marquee behavior="scroll" direction="left" scrollamount="6" class="horizontal-bar-text">
+        Ici les SUJETS PHARES du moment sous forme d'ímages glissantes ... Bienvenue sur le site d'Eco Citoyen ! Ensemble, protégeons notre environnement, encourageons la consommation responsable, et promouvons la citoyenneté active. Rejoignez-nous dans nos initiatives pour un avenir durable !
+    </marquee>
     </div>
 
-    <!-- Conteneur d'icônes -->
-    <div class="icon-container">
-        <div class="icon">
-            <i class="fas fa-headset"></i>
-            <p>RECLAMATIONS & ASSISTANCE</p>
-        </div>
-        <div class="icon">
-            <i class="fas fa-recycle"></i>
-            <p>ECO GESTES</p>
-        </div>
-        <div class="icon">
-            <i class="fas fa-users"></i>
-            <p>ENGAGEMENT CITOYEN</p>
-        </div>
-        <div class="icon">
-            <i class="fas fa-cogs"></i>
-            <p>ECONOMIE CIRCULAIRE ET SOLIDAIRE</p>
-        </div>
+    <!-- Icônes supplémentaires -->
+    <div class="additional-icons">
+        <div class="icon"><i class="fas fa-user-plus"></i><br>ASSISTANCE AUX CITOYENS</div>
+        <div class="icon"><i class="fas fa-leaf"></i><br>ECO GESTES</div>
+        <div class="icon"><i class="fas fa-hand-holding-heart"></i><br>ENGAGEMENT CITOYEN</div>
+        <div class="icon"><i class="fas fa-sync-alt"></i><br>ECONOMIE CIRCULAIRE ET SOLIDAIRE</div>
     </div>
 
 </body>

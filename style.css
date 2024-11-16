@@ -53,3 +53,23 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.logo-container {
+    text-align: center; /* Centrer le logo horizontalement */
+    margin: 20px auto; /* Ajouter un espacement autour du logo */
+}
+
+.eco-logo {
+    max-width: 100%; /* Assurer que le logo s'adapte � l'�cran */
+    height: auto; /* Maintenir le ratio d'aspect */
+    width: 300px; /* Vous pouvez ajuster la largeur selon vos pr�f�rences */
+    border-radius: 8px; /* Optionnel : coins arrondis pour un style plus doux */
+}
+.horizontal-bar {
+    width: 100%;  /* Cela permet à la bande de s'étendre sur toute la largeur de l'écran */
+    height: 200px;  /* Ajustez la hauteur pour rendre la bande plus épaisse */
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
